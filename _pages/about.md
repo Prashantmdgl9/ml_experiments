@@ -3,9 +3,9 @@ layout: page
 title: About Me
 permalink: /about/
 ---
+LinkedIn — https://www.linkedin.com/in/prashant-mudgal-ba210420/ ; 
+Wordpress — https://prashantmudgal.wordpress.com/ ; 
+Substack - https://prashantmudgal.substack.com/ ;
+Medium - https://prashantmdgl9.medium.com/ 
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+Interested in science, maths, startup, and films. Management consultant and data scientist

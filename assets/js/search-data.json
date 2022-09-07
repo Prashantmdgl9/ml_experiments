@@ -104,6 +104,17 @@
   
 
   
+      ,"page2": {
+          "title": "Applications",
+          "content": "These are the apps that have been developed and deployed on a cloud server. These apps have been developed to solve business particular problem statements and are client facing. . Product Recommender in B2B Space in Telco Domain Soil Classifier and Plant Health Analyser for Agriculture Sector Oil Rig Sound Classifier for Safety Enhancement . .",
+          "url": "https://prashantmdgl9.github.io/ml_experiments/Applications/",
+          "relUrl": "/Applications/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -121,7 +132,7 @@
   
 
   
-      ,"page8": {
+      ,"page9": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://prashantmdgl9.github.io/ml_experiments/robots.txt",

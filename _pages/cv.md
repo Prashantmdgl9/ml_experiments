@@ -4,5 +4,5 @@ title: CV
 permalink: /CV/
 ---
 
-<a href="Prashant Mudgal_Mangement_Analytics_Sep 2022.pdf">Link to the PDF version</a>
+<a href="https://github.com/Prashantmdgl9/ml_experiments/blob/fee5efa7db0ec9dfdee47af1f9c1c7c9c569016a/_pages/CV_2022.PDF" target="_blank">PDF.</a>
 

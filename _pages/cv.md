@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Professional Portfolio
+title: CV
 permalink: /CV/
 ---
 

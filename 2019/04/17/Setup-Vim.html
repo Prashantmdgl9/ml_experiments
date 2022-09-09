@@ -1,0 +1,72 @@
+<h1 id="vim-setup">Vim Setup</h1>
+
+<h2 id="setting-up-vim-for-the-first-time">Setting up vim for the first time</h2>
+
+<blockquote>
+  <h4 id="run-the-commands-on-the-terminal"><em>Run the commands on the terminal</em></h4>
+</blockquote>
+
+<p>brew update
+brew install vim</p>
+
+<p>git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim</p>
+
+<p>touch ~/.vimrc</p>
+
+<p>Open vimrc file using vim .vimrc and in the command mode install the plugins using :PluginInstall</p>
+
+<p>All the plugins will be installed.</p>
+
+<p>There can be a problem with the YCM server, solve it using below</p>
+
+<p>cd ~/.vim/bundle/YouCompleteMe/
+sudo pip install cmake
+python install.py</p>
+
+<h2 id="link-to-the-vimrc-file">Link to the .vimrc file</h2>
+
+<p>https://github.com/Prashantmdgl9/Vim/blob/master/.vimrc</p>
+
+<h2 id="vim-commands">Vim commands</h2>
+
+<blockquote>
+  <h4 id="there-are-modes-in-vim-insert-mode-command-mode"><em>There are modes in vim, insert mode, command mode</em></h4>
+</blockquote>
+
+<p>i for the insert mode
+<br />
+Escape for the command mode
+<br />
+h - left
+<br />
+l - right
+<br />
+j - up
+<br />
+k - down
+<br /></p>
+
+<p>:w for write
+<br />
+:wq for write and quit<br />
+:q for quit<br />
+:q! for quitting without saving<br />
+In command mode use dd to delete a line<br />
+use x to delete char by char in command mode<br /></p>
+
+<p>move to next word = w<br />
+move to end of the line = $<br />
+move to the end of the file = G<br /></p>
+
+<p>dw deletes the next word<br />
+d$ deletes to the end of the line<br />
+dG to the end of the file<br /></p>
+
+<h2 id="vim-resources">Vim resources</h2>
+
+<ol>
+  <li>https://realpython.com/vim-and-python-a-match-made-in-heaven/</li>
+  <li>https://linuxhint.com/vim-python-development/</li>
+  <li>https://www.fullstackpython.com/vim.html</li>
+  <li>https://www.vimfromscratch.com/articles/vim-for-python/</li>
+</ol>

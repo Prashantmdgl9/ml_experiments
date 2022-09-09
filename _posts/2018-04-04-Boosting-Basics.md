@@ -22,6 +22,7 @@ This goes on till a condition is met such as batch size or the time reached.<br>
 3. Train another model but instead of using original target use the residual calculated in step 2 as the target for training the model.
 5. Continue till you reach a stopping criteria.
 <br>
+
 > ### _Why Boosting works?_
 
 Each new model will be attempting to fit the error of all of the previous models combined. As we are continuoously creating new residuals, by subtracting the predictions of each new model from the residuals from the previous model, the residuals will get smaller and smaller and thus prediction will get stronger.

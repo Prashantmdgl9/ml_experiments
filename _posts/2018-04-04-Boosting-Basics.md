@@ -2,6 +2,7 @@
 
 Boosting in another ensembling method of creating a strong learner from various weak learners.
 <br>
+
 > ### _Basic idea_
 
 It is a sequential method in which the learners are created in a sequential manner and the errors/misclassifications from the previous model/learner

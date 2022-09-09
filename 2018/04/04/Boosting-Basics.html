@@ -26,9 +26,12 @@ This goes on till a condition is met such as batch size or the time reached.<br 
   <li>Calculate the residuals, fancy name for error. Target - Prediction for each point in dataset.</li>
   <li>Train another model but instead of using original target use the residual calculated in step 2 as the target for training the model.</li>
   <li>Continue till you reach a stopping criteria.
-<br />
-&gt; ### <em>Why Boosting works?</em></li>
+<br /></li>
 </ol>
+
+<blockquote>
+  <h3 id="why-boosting-works"><em>Why Boosting works?</em></h3>
+</blockquote>
 
 <p>Each new model will be attempting to fit the error of all of the previous models combined. As we are continuoously creating new residuals, by subtracting the predictions of each new model from the residuals from the previous model, the residuals will get smaller and smaller and thus prediction will get stronger.
 <br />

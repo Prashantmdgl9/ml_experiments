@@ -28,7 +28,8 @@ Gini calculates the probability that if you picked 2 rows from a group, then the
 Once you have fond the way to split the root node, you have two children nodes. Treat those 2 children nodes as separate datasets and repeat the steps as above to find the best split fot each of them.<br>
 Continue this process recursively, until you have reached some stopping criteria.<br>
 <br>
-**Note**: The splitting criteria is calculated differently for different variables.<br>
+
+*Note* : The splitting criteria is calculated differently for different variables.<br>
 - For continuous variables - reduction in variance(similar to the "score" method above)<br>
 - For categorical variables - information gain, entropy, gini impurity, chi-sq test.<br>
 

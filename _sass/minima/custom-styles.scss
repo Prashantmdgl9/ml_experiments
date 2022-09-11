@@ -10,14 +10,15 @@
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 @import "minima/fastpages-dracula-highlight"; 
 
-table, th, td {
-    margin: 0 auto;
-    border: 1px solid;
-    border-top: 2pt solid;
-    border-bottom: 2pt solid;
-    font-size: 9pt;
+
+
+table {
+  white-space: normal;
+  max-width: 100%;
+  font-size: 100%;
+  border: 1px solid;
+    
+  th{
+    text-align: center! important;
   }
-  
- thead {
-    border-bottom: 2pt solid;
-  }
+}

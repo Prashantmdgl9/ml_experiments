@@ -399,9 +399,9 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:hover .a
 
 .search-result-highlight { color: #2e0137; font-weight: bold; }
 
-table { white-space: normal; max-width: 100%; font-size: 100%; border: none; }
+table { white-space: normal; max-width: 100%; font-size: 100%; border: 1px solid grey; }
 
-table td, table th { text-align: center !important; border: 1px solid grey; }
+table th { text-align: center !important; }
 
 ::-webkit-scrollbar { width: 14px; height: 18px; }
 

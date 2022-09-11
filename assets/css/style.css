@@ -482,8 +482,8 @@ pre code { font-size: 15px !important; }
 
 p code { font-size: 19px; }
 
-table, th, td { margin: 0 auto; border: 1px solid; border-top: 2pt solid; border-bottom: 2pt solid; font-size: 9pt; }
+table { white-space: normal; max-width: 100%; font-size: 100%; border: 1px solid; }
 
-thead { border-bottom: 2pt solid; }
+table th { text-align: center !important; }
 
 /*# sourceMappingURL=style.css.map */

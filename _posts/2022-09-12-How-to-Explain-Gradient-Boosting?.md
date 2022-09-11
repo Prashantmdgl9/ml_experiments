@@ -39,7 +39,7 @@ As a first step, let's estimate the speed randomly.
 | Distance  |Time|Speed| Estimated Speed|
 |:---:|:---:|:---:|:---:|
 | 5 m |1 h   | 5 m/h  |  4 m/h|
-| 6 m  |2 hs   | 3 m/h  | 4 m/h|
+| 6 m  |2 h   | 3 m/h  | 4 m/h|
 | 3 m  | 0.5 h  |  6 m/h |  4 m/h|
 
 From the estimate, we'll calculate the first set of residual(actual-predicted):
@@ -47,7 +47,7 @@ From the estimate, we'll calculate the first set of residual(actual-predicted):
 | Distance  |Time|Speed| Estimated Speed| First Residual|
 |:---:|:---:|:---:|:---:|:---:|
 | 5 m |1 h   | 5 m/h  |  4 m/h| 1|
-| 6 m  |2 hs   | 3 m/h  | 4 m/h|-1|
+| 6 m  |2 h   | 3 m/h  | 4 m/h|-1|
 | 3 m  | 0.5 h  |  6 m/h |  4 m/h|2|
 
 Now, as the next step, the GBM will use the first residual as the target i.e. it will use Distance and time columns to predict the first residual. This will be the first residual model. Predicted residual is the column which is the prediction of this residual column.
@@ -55,7 +55,7 @@ Now, as the next step, the GBM will use the first residual as the target i.e. it
 | Distance  |Time|Speed| Estimated Speed| First Residual|Predicted Residual 1|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | 5 m |1 h   | 5 m/h  |  4 m/h| 1| 1.5|
-| 6 m  |2 hs   | 3 m/h  | 4 m/h|-1|-1.2|
+| 6 m  |2 h   | 3 m/h  | 4 m/h|-1|-1.2|
 | 3 m  | 0.5 h  |  6 m/h |  4 m/h|2|2.4|
 
 After this first model, the new estimated speed will be:<br>
@@ -66,7 +66,7 @@ If learning rate is 0.1, then new estimate for the first row will be: ``4 + 0.1 
 | Distance  |Time|Speed| Estimated Speed| First Residual|Predicted Residual 1|New Estimate|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 5 m |1 h   | 5 m/h  |  4 m/h| 1| 1.5| 4.15|
-| 6 m  |2 hs   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|
+| 6 m  |2 h   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|
 | 3 m  | 0.5 h  |  6 m/h |  4 m/h|2|2.4|4.24|
 
 Use the ``New Estimate`` values to calculate second residuals(Speed - New estimate).
@@ -75,7 +75,7 @@ Use the ``New Estimate`` values to calculate second residuals(Speed - New estima
 | Distance  |Time|Speed| Estimated Speed| First Residual|Predicted Residual 1|New Estimate| Second Residual|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 5 m |1 h   | 5 m/h  |  4 m/h| 1| 1.5| 4.15|0.75|
-| 6 m  |2 hs   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|-0.88|
+| 6 m  |2 h   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|-0.88|
 | 3 m  | 0.5 h  |  6 m/h |  4 m/h|2|2.4|4.24|1.76|
 
 As you see, that the second residuals are smaller than the first residual.
@@ -86,7 +86,7 @@ Now, for the second residual model, use the second residual as the target and pr
 | Distance  |Time|Speed| Estimated Speed| First Residual|Predicted Residual 1|New Estimate| Second Residual|Predicted Residual 2|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 5 m |1 h   | 5 m/h  |  4 m/h| 1| 1.5| 4.15|0.75| 0.8|
-| 6 m  |2 hs   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|-0.88| -0.6|
+| 6 m  |2 h   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|-0.88| -0.6|
 | 3 m  | 0.5 h  |  6 m/h |  4 m/h|2|2.4|4.24|1.76| 2|
 
 Again, use the ``New Estimate + learning rate  * predicted residual 2`` to update the estimated Speed, let's call it new estiamte 2.
@@ -95,7 +95,7 @@ Again, use the ``New Estimate + learning rate  * predicted residual 2`` to updat
 | Distance  |Time|Speed| Estimated Speed| First Residual|Predicted Residual 1|New Estimate| Second Residual|Predicted Residual 2| New Estimate 2|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 5 m |1 h   | 5 m/h  |  4 m/h| 1| 1.5| 4.15|0.75| 0.8|4.23|
-| 6 m  |2 hs   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|-0.88| -0.6|3.82|
+| 6 m  |2 h   | 3 m/h  | 4 m/h|-1|-1.2| 3.88|-0.88| -0.6|3.82|
 | 3 m  | 0.5 h  |  6 m/h |  4 m/h|2|2.4|4.24|1.76| 2|4.44|
 
 Again, find the ``Third Residual`` by subtracting, New estimate 2 from speed and use the third residual as the target that your third residual model will predict.

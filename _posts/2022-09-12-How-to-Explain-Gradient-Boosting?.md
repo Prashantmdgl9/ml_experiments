@@ -37,7 +37,7 @@ As a first step, let's estimate the speed randomly.
 <br>
 
 | Distance  |Time|Speed| Estimated Speed|
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 | 5 miles |1 hour   | 5 mies/hr  |  4 miles/hr|
 | 6 miles  |2 hours   | 3 miles/hr  | 4 miles/hr|
 | 3 miles  | 0.5 hour  |  6 miles/hr |  4 miles/hr|
@@ -64,7 +64,7 @@ If learning rate is 0.1, then new estimate for the first row will be: ``4 + 0.1 
 
 
 | Distance  |Time|Speed| Estimated Speed| First Residual|Predicted Residual 1|New Estimate|
-|---|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 5 miles |1 hour   | 5 mies/hr  |  4 miles/hr| 1| 1.5| 4.15|
 | 6 miles  |2 hours   | 3 miles/hr  | 4 miles/hr|-1|-1.2| 3.88|
 | 3 miles  | 0.5 hour  |  6 miles/hr |  4 miles/hr|2|2.4|4.24|

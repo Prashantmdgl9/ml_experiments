@@ -482,7 +482,7 @@ pre code { font-size: 15px !important; }
 
 p code { font-size: 19px; }
 
-table { margin: 0 auto; border-top: 2pt solid; border-bottom: 2pt solid; font-size: 9pt; }
+table, th, td { margin: 0 auto; border: 1px solid; border-top: 2pt solid; border-bottom: 2pt solid; font-size: 9pt; }
 
 thead { border-bottom: 2pt solid; }
 

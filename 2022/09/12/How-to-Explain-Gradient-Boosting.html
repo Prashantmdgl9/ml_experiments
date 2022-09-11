@@ -13,7 +13,7 @@ weights of the misclassified data points are increased/changed to tell the next 
   <li>This goes on until a stopping criteria such as time limit, number of iterations, number of trees etc has reached.</li>
 </ol>
 
-<p>Essentially, these sequential trees help in decreasing the error of the previous misclassifications and the learnings are carried forward as we move through the iterations. <br />
+<p>Essentially, these sequential trees help in decreasing the error of the previous misclassifications and the learnings are carried forward as we move though the iterations. <br />
 The results of the finam model encompass the learnings of all the weak learners.</p>
 
 <h2 id="gradient-boosting">Gradient Boosting</h2>
@@ -25,29 +25,31 @@ In GBM, learning happens by optimising the loss function(just like how a regress
   <h4 id="maybe-an-example-might-help-in-this-case"><em>Maybe an example might help in this case:</em></h4>
 </blockquote>
 
+<p>Distance in miles, time in hours</p>
+
 <table>
   <thead>
     <tr>
-      <th>Distance</th>
-      <th>Time</th>
-      <th>Speed</th>
+      <th style="text-align: center">Distance</th>
+      <th style="text-align: center">Time</th>
+      <th style="text-align: center">Speed</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>5 miles</td>
-      <td>1 hour</td>
-      <td>5 mies/hr</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
     </tr>
     <tr>
-      <td>6 miles</td>
-      <td>2 hours</td>
-      <td>3 miles/hr</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 h</td>
+      <td style="text-align: center">3 m/h</td>
     </tr>
     <tr>
-      <td>3 miles</td>
-      <td>0.5 hour</td>
-      <td>6 miles/hr</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
     </tr>
   </tbody>
 </table>
@@ -68,22 +70,22 @@ As a first step, let’s estimate the speed randomly.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">5 miles</td>
-      <td style="text-align: center">1 hour</td>
-      <td style="text-align: center">5 mies/hr</td>
-      <td style="text-align: center">4 miles/hr</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
+      <td style="text-align: center">4 m/h</td>
     </tr>
     <tr>
-      <td style="text-align: center">6 miles</td>
-      <td style="text-align: center">2 hours</td>
-      <td style="text-align: center">3 miles/hr</td>
-      <td style="text-align: center">4 miles/hr</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 hs</td>
+      <td style="text-align: center">3 m/h</td>
+      <td style="text-align: center">4 m/h</td>
     </tr>
     <tr>
-      <td style="text-align: center">3 miles</td>
-      <td style="text-align: center">0.5 hour</td>
-      <td style="text-align: center">6 miles/hr</td>
-      <td style="text-align: center">4 miles/hr</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
+      <td style="text-align: center">4 m/h</td>
     </tr>
   </tbody>
 </table>
@@ -93,34 +95,34 @@ As a first step, let’s estimate the speed randomly.
 <table>
   <thead>
     <tr>
-      <th>Distance</th>
-      <th>Time</th>
-      <th>Speed</th>
-      <th>Estimated Speed</th>
-      <th>First Residual</th>
+      <th style="text-align: center">Distance</th>
+      <th style="text-align: center">Time</th>
+      <th style="text-align: center">Speed</th>
+      <th style="text-align: center">Estimated Speed</th>
+      <th style="text-align: center">First Residual</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>5 miles</td>
-      <td>1 hour</td>
-      <td>5 mies/hr</td>
-      <td>4 miles/hr</td>
-      <td>1</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">1</td>
     </tr>
     <tr>
-      <td>6 miles</td>
-      <td>2 hours</td>
-      <td>3 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>-1</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 hs</td>
+      <td style="text-align: center">3 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">-1</td>
     </tr>
     <tr>
-      <td>3 miles</td>
-      <td>0.5 hour</td>
-      <td>6 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>2</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">2</td>
     </tr>
   </tbody>
 </table>
@@ -130,38 +132,38 @@ As a first step, let’s estimate the speed randomly.
 <table>
   <thead>
     <tr>
-      <th>Distance</th>
-      <th>Time</th>
-      <th>Speed</th>
-      <th>Estimated Speed</th>
-      <th>First Residual</th>
-      <th>Predicted Residual 1</th>
+      <th style="text-align: center">Distance</th>
+      <th style="text-align: center">Time</th>
+      <th style="text-align: center">Speed</th>
+      <th style="text-align: center">Estimated Speed</th>
+      <th style="text-align: center">First Residual</th>
+      <th style="text-align: center">Predicted Residual 1</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>5 miles</td>
-      <td>1 hour</td>
-      <td>5 mies/hr</td>
-      <td>4 miles/hr</td>
-      <td>1</td>
-      <td>1.5</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1.5</td>
     </tr>
     <tr>
-      <td>6 miles</td>
-      <td>2 hours</td>
-      <td>3 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>-1</td>
-      <td>-1.2</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 hs</td>
+      <td style="text-align: center">3 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">-1.2</td>
     </tr>
     <tr>
-      <td>3 miles</td>
-      <td>0.5 hour</td>
-      <td>6 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>2</td>
-      <td>2.4</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2.4</td>
     </tr>
   </tbody>
 </table>
@@ -184,28 +186,28 @@ If learning rate is 0.1, then new estimate for the first row will be: <code clas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">5 miles</td>
-      <td style="text-align: center">1 hour</td>
-      <td style="text-align: center">5 mies/hr</td>
-      <td style="text-align: center">4 miles/hr</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
+      <td style="text-align: center">4 m/h</td>
       <td style="text-align: center">1</td>
       <td style="text-align: center">1.5</td>
       <td style="text-align: center">4.15</td>
     </tr>
     <tr>
-      <td style="text-align: center">6 miles</td>
-      <td style="text-align: center">2 hours</td>
-      <td style="text-align: center">3 miles/hr</td>
-      <td style="text-align: center">4 miles/hr</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 hs</td>
+      <td style="text-align: center">3 m/h</td>
+      <td style="text-align: center">4 m/h</td>
       <td style="text-align: center">-1</td>
       <td style="text-align: center">-1.2</td>
       <td style="text-align: center">3.88</td>
     </tr>
     <tr>
-      <td style="text-align: center">3 miles</td>
-      <td style="text-align: center">0.5 hour</td>
-      <td style="text-align: center">6 miles/hr</td>
-      <td style="text-align: center">4 miles/hr</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
+      <td style="text-align: center">4 m/h</td>
       <td style="text-align: center">2</td>
       <td style="text-align: center">2.4</td>
       <td style="text-align: center">4.24</td>
@@ -218,46 +220,46 @@ If learning rate is 0.1, then new estimate for the first row will be: <code clas
 <table>
   <thead>
     <tr>
-      <th>Distance</th>
-      <th>Time</th>
-      <th>Speed</th>
-      <th>Estimated Speed</th>
-      <th>First Residual</th>
-      <th>Predicted Residual 1</th>
-      <th>New Estimate</th>
-      <th>Second Residual</th>
+      <th style="text-align: center">Distance</th>
+      <th style="text-align: center">Time</th>
+      <th style="text-align: center">Speed</th>
+      <th style="text-align: center">Estimated Speed</th>
+      <th style="text-align: center">First Residual</th>
+      <th style="text-align: center">Predicted Residual 1</th>
+      <th style="text-align: center">New Estimate</th>
+      <th style="text-align: center">Second Residual</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>5 miles</td>
-      <td>1 hour</td>
-      <td>5 mies/hr</td>
-      <td>4 miles/hr</td>
-      <td>1</td>
-      <td>1.5</td>
-      <td>4.15</td>
-      <td>0.75</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1.5</td>
+      <td style="text-align: center">4.15</td>
+      <td style="text-align: center">0.75</td>
     </tr>
     <tr>
-      <td>6 miles</td>
-      <td>2 hours</td>
-      <td>3 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>-1</td>
-      <td>-1.2</td>
-      <td>3.88</td>
-      <td>-0.88</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 hs</td>
+      <td style="text-align: center">3 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">-1.2</td>
+      <td style="text-align: center">3.88</td>
+      <td style="text-align: center">-0.88</td>
     </tr>
     <tr>
-      <td>3 miles</td>
-      <td>0.5 hour</td>
-      <td>6 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>2</td>
-      <td>2.4</td>
-      <td>4.24</td>
-      <td>1.76</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2.4</td>
+      <td style="text-align: center">4.24</td>
+      <td style="text-align: center">1.76</td>
     </tr>
   </tbody>
 </table>
@@ -269,50 +271,50 @@ If learning rate is 0.1, then new estimate for the first row will be: <code clas
 <table>
   <thead>
     <tr>
-      <th>Distance</th>
-      <th>Time</th>
-      <th>Speed</th>
-      <th>Estimated Speed</th>
-      <th>First Residual</th>
-      <th>Predicted Residual 1</th>
-      <th>New Estimate</th>
-      <th>Second Residual</th>
-      <th>Predicted Residual 2</th>
+      <th style="text-align: center">Distance</th>
+      <th style="text-align: center">Time</th>
+      <th style="text-align: center">Speed</th>
+      <th style="text-align: center">Estimated Speed</th>
+      <th style="text-align: center">First Residual</th>
+      <th style="text-align: center">Predicted Residual 1</th>
+      <th style="text-align: center">New Estimate</th>
+      <th style="text-align: center">Second Residual</th>
+      <th style="text-align: center">Predicted Residual 2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>5 miles</td>
-      <td>1 hour</td>
-      <td>5 mies/hr</td>
-      <td>4 miles/hr</td>
-      <td>1</td>
-      <td>1.5</td>
-      <td>4.15</td>
-      <td>0.75</td>
-      <td>0.8</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1.5</td>
+      <td style="text-align: center">4.15</td>
+      <td style="text-align: center">0.75</td>
+      <td style="text-align: center">0.8</td>
     </tr>
     <tr>
-      <td>6 miles</td>
-      <td>2 hours</td>
-      <td>3 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>-1</td>
-      <td>-1.2</td>
-      <td>3.88</td>
-      <td>-0.88</td>
-      <td>-0.6</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 hs</td>
+      <td style="text-align: center">3 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">-1.2</td>
+      <td style="text-align: center">3.88</td>
+      <td style="text-align: center">-0.88</td>
+      <td style="text-align: center">-0.6</td>
     </tr>
     <tr>
-      <td>3 miles</td>
-      <td>0.5 hour</td>
-      <td>6 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>2</td>
-      <td>2.4</td>
-      <td>4.24</td>
-      <td>1.76</td>
-      <td>2</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2.4</td>
+      <td style="text-align: center">4.24</td>
+      <td style="text-align: center">1.76</td>
+      <td style="text-align: center">2</td>
     </tr>
   </tbody>
 </table>
@@ -323,54 +325,54 @@ If learning rate is 0.1, then new estimate for the first row will be: <code clas
 <table>
   <thead>
     <tr>
-      <th>Distance</th>
-      <th>Time</th>
-      <th>Speed</th>
-      <th>Estimated Speed</th>
-      <th>First Residual</th>
-      <th>Predicted Residual 1</th>
-      <th>New Estimate</th>
-      <th>Second Residual</th>
-      <th>Predicted Residual 2</th>
-      <th>New Estimate 2</th>
+      <th style="text-align: center">Distance</th>
+      <th style="text-align: center">Time</th>
+      <th style="text-align: center">Speed</th>
+      <th style="text-align: center">Estimated Speed</th>
+      <th style="text-align: center">First Residual</th>
+      <th style="text-align: center">Predicted Residual 1</th>
+      <th style="text-align: center">New Estimate</th>
+      <th style="text-align: center">Second Residual</th>
+      <th style="text-align: center">Predicted Residual 2</th>
+      <th style="text-align: center">New Estimate 2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>5 miles</td>
-      <td>1 hour</td>
-      <td>5 mies/hr</td>
-      <td>4 miles/hr</td>
-      <td>1</td>
-      <td>1.5</td>
-      <td>4.15</td>
-      <td>0.75</td>
-      <td>0.8</td>
-      <td>4.23</td>
+      <td style="text-align: center">5 m</td>
+      <td style="text-align: center">1 h</td>
+      <td style="text-align: center">5 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1.5</td>
+      <td style="text-align: center">4.15</td>
+      <td style="text-align: center">0.75</td>
+      <td style="text-align: center">0.8</td>
+      <td style="text-align: center">4.23</td>
     </tr>
     <tr>
-      <td>6 miles</td>
-      <td>2 hours</td>
-      <td>3 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>-1</td>
-      <td>-1.2</td>
-      <td>3.88</td>
-      <td>-0.88</td>
-      <td>-0.6</td>
-      <td>3.82</td>
+      <td style="text-align: center">6 m</td>
+      <td style="text-align: center">2 hs</td>
+      <td style="text-align: center">3 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">-1.2</td>
+      <td style="text-align: center">3.88</td>
+      <td style="text-align: center">-0.88</td>
+      <td style="text-align: center">-0.6</td>
+      <td style="text-align: center">3.82</td>
     </tr>
     <tr>
-      <td>3 miles</td>
-      <td>0.5 hour</td>
-      <td>6 miles/hr</td>
-      <td>4 miles/hr</td>
-      <td>2</td>
-      <td>2.4</td>
-      <td>4.24</td>
-      <td>1.76</td>
-      <td>2</td>
-      <td>4.44</td>
+      <td style="text-align: center">3 m</td>
+      <td style="text-align: center">0.5 h</td>
+      <td style="text-align: center">6 m/h</td>
+      <td style="text-align: center">4 m/h</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2.4</td>
+      <td style="text-align: center">4.24</td>
+      <td style="text-align: center">1.76</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">4.44</td>
     </tr>
   </tbody>
 </table>
@@ -379,7 +381,7 @@ If learning rate is 0.1, then new estimate for the first row will be: <code clas
 
 <p>This will keep going on until a stopping criteria is reached such as number of iterations, depth of a tree, time limit etc</p>
 
-<p>Essentially, in this algorithm, we are boosting the gradient(through the learning param and new residuals calculated at each step) and it is helping in decreasing the overall error.</p>
+<p>Essentially, in this algorithm, we are boosting the gradient(though the learning param and new residuals calculated at each step) and it is helping in decreasing the overall error.</p>
 
 <p>Also, as we can see that it is an additive model.</p>
 

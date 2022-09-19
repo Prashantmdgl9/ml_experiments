@@ -2,7 +2,7 @@
 
 One can think that if one would keep on increasing the depth of a neural network, one can keep on achieving higher accuracy but that's not the case as we have seen in the paper by Kaiming He et al.
 
-Link to the paper - https://arxiv.org/pdf/1512.03385.pdf
+Link to the paper - < https://arxiv.org/pdf/1512.03385.pdf>
 
 As we see in the first image itself, the training error for the deep network with 56 layers is worse than the training error with 20 layers.
 
@@ -31,7 +31,7 @@ We can see the loss surface of the two networks, one with the skip connection an
 
 Goldstein, Xu, Li et all did some really great work for this paper of theirs in which they visualise the loss landscape of the neural networks.
 
-Link to the paper - https://arxiv.org/pdf/1712.09913.pdf
+Link to the paper - < https://arxiv.org/pdf/1712.09913.pdf>
 
 <img src = "https://i.postimg.cc/QdJqCjhM/SCR-20220919-uty.png" width = "500" height = "200" />
 <br>
@@ -67,3 +67,18 @@ Size of the image after each block is given by:
 So, a 300 by 300 image after first layer of convolution with stride, s= 2, padding, f = 3, filter size, p = 7 becomes 150 by 150
 
 As we move through the layers, the size keeps on decreasing.
+
+One more thing about the dotted and solid skip conenctions, the dotted ones are called the convolution blocks while the solid ones are called the identity blocks.
+
+The identity block is used when the input size = the output size i.e. the image doesn't go through any size transformation. If the image has gone throguh the convolutions and also size transformations, in that case the input can't simply be added via a skip connection because of disparity in the input and output sizes.
+
+In this case, before feeding the value of x, it goes through a convolution block of its own to make the sizes consistent
+
+
+<img src = " https://i.postimg.cc/PxZZTqYX/SCR-20220920-1yk.png" width = "400" height = "300" />
+
+The convolution in the skip connection block generally is 1x1 filter size convolution.
+
+That's the architecture of the Resnet, it works while striving to make the f(X) = 0 and thus making, Y = X.
+
+

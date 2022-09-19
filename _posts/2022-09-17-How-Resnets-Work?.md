@@ -81,4 +81,5 @@ In this case, before feeding the value of x, it goes through a convolution block
 
 The convolution in the skip connection block generally is 1x1 filter size convolution.
 
-That's the architecture of the Resnet, it works while striving to make the f(X) = 0 and thus making, Y = X.
+> ### _That's the architecture of the Resnet, it works while striving to make the f(X) = 0 and thus making, Y = X._
+

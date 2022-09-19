@@ -2,7 +2,7 @@
 
 One can think that if one would keep on increasing the depth of a neural network, one can keep on achieving higher accuracy but that's not the case as we have seen in the paper by Kaiming He et al.
 
-Link to the paper - < https://arxiv.org/pdf/1512.03385.pdf>
+Link to the paper - [https://arxiv.org/pdf/1512.03385.pdf](https://arxiv.org/pdf/1512.03385.pdf)
 
 As we see in the first image itself, the training error for the deep network with 56 layers is worse than the training error with 20 layers.
 
@@ -18,7 +18,9 @@ Also, these values are multiplied by a earning rate whose value is 0.1 > learnin
 
 For earlier layers, the chain rule will contain many more terms than the later layers and thus the earlier layers' weight adjustement will consist of more multiplications which will result in a tiny number and according to:<br>
 
+``
 `` new_weight = old_weight - learning_rate * result of chain rule``
+``
 
 ### How Resnets help?
 
@@ -31,7 +33,7 @@ We can see the loss surface of the two networks, one with the skip connection an
 
 Goldstein, Xu, Li et all did some really great work for this paper of theirs in which they visualise the loss landscape of the neural networks.
 
-Link to the paper - < https://arxiv.org/pdf/1712.09913.pdf>
+Link to the paper - [https://arxiv.org/pdf/1712.09913.pdf](https://arxiv.org/pdf/1712.09913.pdf)
 
 <img src = "https://i.postimg.cc/QdJqCjhM/SCR-20220919-uty.png" width = "500" height = "200" />
 <br>
@@ -60,9 +62,9 @@ If we can make f(X) = 0, then the output will at the adder will be Y = X, which 
 As we can see, in the residual model, after 3 conv layers, the number of filters have changed from 64 to 128 which means we must have decreased the size of the image. The size shift at various times can be seen through the dotted connections.
 
 Size of the image after each block is given by:
-
-
+``
 ``(n + 2P - f)/2 + 1 ``
+``
 
 So, a 300 by 300 image after first layer of convolution with stride, s= 2, padding, f = 3, filter size, p = 7 becomes 150 by 150
 
@@ -80,5 +82,3 @@ In this case, before feeding the value of x, it goes through a convolution block
 The convolution in the skip connection block generally is 1x1 filter size convolution.
 
 That's the architecture of the Resnet, it works while striving to make the f(X) = 0 and thus making, Y = X.
-
-

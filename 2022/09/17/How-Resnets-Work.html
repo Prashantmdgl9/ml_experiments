@@ -18,9 +18,7 @@ During the backpropagation, the model has to adjust the weights and those adjust
 
 <p>For earlier layers, the chain rule will contain many more terms than the later layers and thus the earlier layers’ weight adjustement will consist of more multiplications which will result in a tiny number and according to:<br /></p>
 
-<p><code class="language-plaintext highlighter-rouge">
-</code> new_weight = old_weight - learning_rate * result of chain rule<code class="language-plaintext highlighter-rouge">
-</code></p>
+<p><code class="language-plaintext highlighter-rouge">new_weight = old_weight - learning_rate * result of chain rule</code></p>
 
 <h3 id="how-resnets-help">How Resnets help?</h3>
 
@@ -57,10 +55,9 @@ In a normal convolution network, the layers are stacked on top of one another, w
 <br />
 As we can see, in the residual model, after 3 conv layers, the number of filters have changed from 64 to 128 which means we must have decreased the size of the image. The size shift at various times can be seen through the dotted connections.</p>
 
-<p>Size of the image after each block is given by:
-<code class="language-plaintext highlighter-rouge">
-</code>(n + 2P - f)/2 + 1 <code class="language-plaintext highlighter-rouge">
-</code></p>
+<p>Size of the image after each block is given by:</p>
+
+<p><code class="language-plaintext highlighter-rouge">(n + 2P - f)/2 + 1</code></p>
 
 <p>So, a 300 by 300 image after first layer of convolution with stride, s= 2, padding, f = 3, filter size, p = 7 becomes 150 by 150</p>
 

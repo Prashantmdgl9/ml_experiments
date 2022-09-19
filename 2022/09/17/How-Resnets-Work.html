@@ -6,10 +6,13 @@
 
 <p>As we see in the first image itself, the training error for the deep network with 56 layers is worse than the training error with 20 layers.</p>
 
-<p><a href="https://postimg.cc/r0sCcXbL"><img src="https://i.postimg.cc/nzYd4nGM/SCR-20220919-ubn.png" alt="SCR-20220919-ubn.png" /></a></p>
+<p><img src="https://i.postimg.cc/nzYd4nGM/SCR-20220919-ubn.png" width="500" height="300" />
+<br />
+<br /></p>
 
 <p>The reason behind this stalling of the training of the neural network as we go deeper is the problem of the vanishng gradient.
-During the backpropagation, the model has to adjust the weights and those adjustments are calculated accordin to the chain rule of derivatives. For many of the weights, these values come out as less than 1.<br /></p>
+During the backpropagation, the model has to adjust the weights and those adjustments are calculated accordin to the chain rule of derivatives. For many of the weights, these values come out as less than 1.
+<br /></p>
 
 <p>Also, these values are multiplied by a earning rate whose value is 0.1 &gt; learning_rate &gt; 0.0001, essentially a much smaller number. When we multiply more and more numbers that are less than 1, we get more small numbers and thus the weights of the earlier layers don’t get adjusted at all during the backpropagation.<br /></p>
 
@@ -29,15 +32,16 @@ During the backpropagation, the model has to adjust the weights and those adjust
 
 <p>Link to the paper - https://arxiv.org/pdf/1712.09913.pdf</p>
 
-<p><a href="https://postimg.cc/213WXRqp"><img src="https://i.postimg.cc/QdJqCjhM/SCR-20220919-uty.png" alt="SCR-20220919-uty.png" /></a></p>
+<p><img src="https://i.postimg.cc/QdJqCjhM/SCR-20220919-uty.png" width="500" height="200" />
+<br />
+<br />
+In a normal convolution network, the layers are stacked on top of one another, while in Resnet, apart from the stacking, there is a skip connection that goes from the input to the output.</p>
 
-<p>In a normal convolution network, the layers are stacked on top of one another, while in Resnet, apart from the stacking, there is a skip connection that goes from the input to the output.</p>
-
-<p><a href="https://postimg.cc/KKZDqgDj"><img src="https://i.postimg.cc/8CvXCRFR/SCR-20220919-ucq.png" alt="SCR-20220919-ucq.png" /></a></p>
+<p><img src="https://i.postimg.cc/8CvXCRFR/SCR-20220919-ucq.png" width="300" height="200" /></p>
 
 <p>We have added the original input to the output of the convolution block via the skip connection, this will help during the backpropagation calculus and the partial derivative won’t reach a very small value and thus avoiding the issue of the vanishing gradient.</p>
 
-<p><a href="https://postimg.cc/jwxpYTRz"><img src="https://i.postimg.cc/xCMnHj7F/SCR-20220919-vzq.png" alt="SCR-20220919-vzq.png" /></a></p>
+<p><img src="https://i.postimg.cc/xCMnHj7F/SCR-20220919-vzq.png" width="300" height="200" /></p>
 
 <p>X is the input, f(X) is the output of the small network block and we have added the skip connection, so, at the adder, the value is f(X) + X.</p>
 
@@ -45,3 +49,16 @@ During the backpropagation, the model has to adjust the weights and those adjust
 
 <p><strong>Note</strong> The first layer of the Resnet arch has stride 2 convolution. The vernacular 1x1 conv, 64 means filter size of 1x1  and 64 such filters; 3x3, 128 means 3x3 sized filter and 128 such filters.</p>
 
+<p><img src="https://i.postimg.cc/gJC5NpCX/SCR-20220919-xbv.png" width="400" height="800" /></p>
+
+<p><br />
+<br />
+As we can see, in the residual model, after 3 conv layers, the number of filters have changed from 64 to 128 which means we must have decreased the size of the image. The size shift at various times can be seen through the dotted connections.</p>
+
+<p>Size of the image after each block is given by:</p>
+
+<p><code class="language-plaintext highlighter-rouge">(n + 2P - f)/2 + 1</code></p>
+
+<p>So, a 300 by 300 image after first layer of convolution with stride, s= 2, padding, f = 3, filter size, p = 7 becomes 150 by 150</p>
+
+<p>As we move through the layers, the size keeps on decreasing.</p>

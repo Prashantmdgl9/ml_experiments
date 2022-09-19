@@ -18,9 +18,9 @@ Also, these values are multiplied by a earning rate whose value is 0.1 > learnin
 
 For earlier layers, the chain rule will contain many more terms than the later layers and thus the earlier layers' weight adjustement will consist of more multiplications which will result in a tiny number and according to:<br>
 
-``
+
 `` new_weight = old_weight - learning_rate * result of chain rule``
-``
+
 
 ### How Resnets help?
 
@@ -62,9 +62,9 @@ If we can make f(X) = 0, then the output will at the adder will be Y = X, which 
 As we can see, in the residual model, after 3 conv layers, the number of filters have changed from 64 to 128 which means we must have decreased the size of the image. The size shift at various times can be seen through the dotted connections.
 
 Size of the image after each block is given by:
-``
+
 ``(n + 2P - f)/2 + 1 ``
-``
+
 
 So, a 300 by 300 image after first layer of convolution with stride, s= 2, padding, f = 3, filter size, p = 7 becomes 150 by 150
 

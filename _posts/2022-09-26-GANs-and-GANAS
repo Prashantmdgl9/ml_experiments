@@ -12,4 +12,4 @@ If you have a low resolution photograph and you want to make it high resolution,
 
 Earlier, the question was how far off we are from the original image which is supposed to be good quality and because pixels don't really mismatch, the loss is not very high despite having a low resolution image at hand.
 
-These issues are solved by something called GAN - Generative Adversarial Network. A GAN is something
+These issues are solved by something called GAN - Generative Adversarial Network. A GAN is something that has two parts.

@@ -25,4 +25,14 @@
 
 <p>These issues are solved by something called GAN - Generative Adversarial Network. A GAN is something that has two parts. A usual loss function that will check how far off you are from the real object and the other one is called a critic or a discriminator that will ascertain whether the geenrated/cleaned image is a good/high resolution image of the thing.</p>
 
-<p>The loss function calls another model called a critic or a discriminator.</p>
+<p>The loss function calls the critic/discriminator.</p>
+
+<p>The discriminator will take all the generated/cleaned images and take the high resluton images and will try to classify them in binary bucket of high res vs generated/cleaned. The idea is to fool the discriminator to a degree that it will start classifying the generated/cleaned images as the high res images.</p>
+
+<p><a href="https://postimg.cc/BX76tMV9"><img src="https://i.postimg.cc/qv4CbFcR/SCR-20221019-w9e.png" alt="SCR-20221019-w9e.png" /></a></p>
+
+<p>It is more of a ping pong process. You train the predictor and then ask the discriminator how am I doing and then train the predictor more and then go back to discriminator and so on.</p>
+
+<p>You train the generator for a while and then ask the discriminator how did you do and once you got the results then you train the generator again, after a while your generator will be quite good and will start fooling the discriminator. So, you stop training the generator and train the discriminator with the newly geenrated/cleaned image, now your discriminator is strong. You go back again and train the generator. This keeps going on till you are satisfied with the results.</p>
+
+<p>They take a long time to train as generator and discriminator are dependent on each other. If neither is trained then it is the case of the blind leading the blind.</p>

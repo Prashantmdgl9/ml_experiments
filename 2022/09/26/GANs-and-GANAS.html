@@ -8,13 +8,21 @@
 
 <p>I have discussed it with many friends of mine who are in deep learning and they would say that he has ulterior motives, he wants to be famous as someone who is locking horns with big corps in the field of deep learning, some say his API is half baked, a few have good words to say about him, one of them said that he has become a millionaire through affiliations and what not.</p>
 
-<p>I don’t know whether there is merit in them or not but I do apprecaite the fact that he has broguht this course that people can benefit greatly from. It bridged many gaps in my knowledge, the things that I had just taken for granted for I couldn’t understand or come up with an explanation for their existence, I understood the reason behind them. I don’t want to make a comparison with any other courses out there but this one was just right up my alley of top down approach than the bottom up which I detest for too many reasons.</p>
+<p>I don’t know whether there is merit in them or not but I do apprecaite the fact that he has broguht this course that people can benefit greatly from. People talk about democracy but in real sense, provision of knowledge for  all is the real democratisation of the AI.</p>
+
+<p>It bridged many gaps in my knowledge, the things that I had just taken for granted for I couldn’t understand or come up with an explanation for their existence, I understood the reason behind them. I don’t want to make a comparison with any other courses out there but this one was just right up my alley of top down approach than the bottom up which I detest for many reasons.</p>
 
 <p>Overall, I found his course quite helpful and it doesn’t really matter what others say, at least his’ is open source.</p>
 
 <h1 id="the-story-of-gans">The story of GANs</h1>
-<p>If you have a low resolution photograph and you want to make it high resolution, then a simple neural network that uses the MSE/RMSE/MAE as the loss functions won’t be able to perform well as the output image would be quite close as far as the pixels are concerned and thus the loss would not be really high. To mitigate this problem, we need to form a different question - Is this a good quality image of the object under consideration?</p>
+<p>I don’t have to educate the masses on what GANs are, these small posts are for my perusual as they help in crystallise my understanding and also act as a quick reference for future use. If anyone else finds them useful, then that’s an added cherry on the top.</p>
 
-<p>Earlier, the question was how far off we are from the original image which is supposed to be good quality and because pixels don’t really mismatch, the loss is not very high despite having a low resolution image at hand.</p>
+<p>Ok, about GANs.</p>
 
-<p>These issues are solved by something called GAN - Generative Adversarial Network. A GAN is something that has two parts. To be contd… WIP</p>
+<p>If you have a low resolution photograph and you want to make it high resolution, then a simple neural network that uses the MSE/RMSE/MAE as the loss functions won’t be able to perform well as the output image would be quite close as far as the pixels are concerned and thus the loss would not be really high. To mitigate this problem, we need to form a different question - Is this a good quality image of the object under consideration? e.g. Is this a good quality image of a cat?</p>
+
+<p>Earlier, the question was how far off we are from the original image which is supposed to be good quality but because pixels don’t really mismatch a lot, the loss is not very high despite having a low resolution image at hand.</p>
+
+<p>These issues are solved by something called GAN - Generative Adversarial Network. A GAN is something that has two parts. A usual loss function that will check how far off you are from the real object and the other one is called a critic or a discriminator that will ascertain whether the geenrated/cleaned image is a good/high resolution image of the thing.</p>
+
+<p>The loss function calls another model called a critic or a discriminator.</p>

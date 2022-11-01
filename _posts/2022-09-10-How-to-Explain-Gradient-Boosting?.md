@@ -13,12 +13,12 @@ weights of the misclassified data points are increased/changed to tell the next 
 5. This goes on until a stopping criteria such as time limit, number of iterations, number of trees etc has reached.
 
 Essentially, these sequential trees help in decreasing the error of the previous misclassifications and the learnings are carried forward as we move though the iterations. <br>
-The results of the finam model encompass the learnings of all the weak learners.
+The results of the final model encompass the learnings of all the weak learners.
 
 
 ## Gradient Boosting
 Gradient boost has a little difference.<br>
-In GBM, learning happens by optimising the loss function(just like how a regression model tries to optimise the sum of sqaured errors). Too much jargon!
+In GBM, learning happens by optimising the loss function(just like how a regression model tries to optimise the sum of squared errors). Too much jargon!
 
 ### How?
 > #### _Maybe an example might help in this case:_
@@ -32,7 +32,7 @@ Distance in miles, time in hours
 | 3 m  | 0.5 h  |  6 m/h |
 
 <br>
-Let's say we don't know how to calculate speed given the time and distance of a vehicle, so we have to take help of the gradient boosting algo(yeah! because calculators aren't available, can any scenario be more hypthetical than this!!)<br>
+Let's say we don't know how to calculate speed given the time and distance of a vehicle, so we have to take help of the gradient boosting algo(yeah! because calculators aren't available, can any scenario be more hypothetical than this!!)<br>
 As a first step, let's estimate the speed randomly.
 <br>
 

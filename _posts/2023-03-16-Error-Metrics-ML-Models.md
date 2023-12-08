@@ -57,6 +57,47 @@ Both precision and recall should be balanced. Not one at the cost of the other.
 
 F1 score is Harmonic mean between precision and recall. It is a system that incorporates both precision and recall.
 
+## ROC AUC
+Receiver Operating Characteristics and Area under the curve
+
+<br>
+ROC curve is a curve between TPR and FPR
+<br>
+PR curve is between precision and recall
+
+<br>
+Area under the curve can be calculated by measuring either of the 2 curves PR or ROC. It will be a number, the higher the better.
+
+<br>
+
+## Mean Absolute Error(MAE)
+
+Mean Absolute Error is the average of the difference between the Original Values and the Predicted Values. It gives us the measure of how far the predictions were from the actual output. However, they don’t gives us any idea of the direction of the error i.e. whether we are under predicting the data or over predicting the data. We take the absolute value of the errors to mitigate the negative signs from cancelling the positive values.
+
+<br>
+convergence takes a long time because gradient descent can't be used easily. Not a parabola but straight line. Uses sub gradient concept.
+
+## Mean Squared Error(MSE)
+
+Mean Squared Error(MSE) is quite similar to Mean Absolute Error, the only difference being that MSE takes the average of the square of the difference between the original values and the predicted values. The advantage of MSE being that it is easier to compute the gradient, whereas Mean Absolute Error requires complicated linear programming tools to compute the gradient. As, we take square of the error, the effect of larger errors become more pronounced then smaller error, hence the model can now focus more on the larger errors.
+
+It has one local and global minima and thus it won't be stuck in only local minima like many other curves.
+
+It is not robust to outliers though as it will try to take the outliers into account and thus too much error.
+Second issue is MSE is changes the unit as the unit gets squared e.g. if measuring error in salary, MSE will measure it in dollar squared.
+
+## RMSE
+
+It is sq root of MSE. The units are retained.
+RMSE removes the bias towards only higher value error terms in the MSE.
+
+
+
+
+
+
+
+
 
 
 

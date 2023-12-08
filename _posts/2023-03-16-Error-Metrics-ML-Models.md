@@ -32,6 +32,35 @@ R squared isn't a notion for accuracy but how much variation in y can be explain
 R sq also tells how much less variation is around the fitted line compared to that of the mean line. A high value means there is less variation of the data around that line and it is a better line compared to the mean line.
 <br>
 
+
+## Precision and Recall
+
+Accuracy can be defined as correct identified items/ total items.
+<br>
+Apple and Orange classifier. If 7 correctly identified out of 10 then 70% accuracy but accuracy suffers from problem of imbalanced classes. 
+If 990 oranges and 10 apples, then almost everything will be classified as an orange and we will still call the model to be 99% accurate.
+<br>
+
+Precision for apple,  Out of all that were classified as apple, total apples in the classifcation bucket/ total items classified as apples
+3/5 = 60%
+<br>
+Recall for apple, correctly classified apples/ total apples in the system.
+3/4 = 75%
+<br>
+
+Precision can be seen as a measure of quality, and recall as a measure of quantity. Higher precision means that an algorithm returns more relevant results than irrelevant ones, and high recall means that an algorithm returns most of the relevant results (whether or not irrelevant ones are also returned).Precision can be seen as a measure of quality, and recall as a measure of quantity. Higher precision means that an algorithm returns more relevant results than irrelevant ones, and high recall means that an algorithm returns most of the relevant results (whether or not irrelevant ones are also returned).
+
+<br>
+
+Both precision and recall should be balanced. Not one at the cost of the other.
+<br>
+
+F1 score is Harmonic mean between precision and recall. It is a system that incorporates both precision and recall.
+
+
+
+
+
   
 
 

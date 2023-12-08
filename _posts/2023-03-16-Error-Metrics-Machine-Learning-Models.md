@@ -108,6 +108,21 @@ Scale-dependent means the error metrics are expressed in the units (i.e. Dollars
 The main advantage of scale dependent metrics is that they are usually easy to calculate and interpret. However, they can not be used to compare different series, because of their scale dependency
 <br>
 
+Percentage Error Metrics solve this problem. They are scale independent and used to compare forecast performance between different time series. However, their weak spots are zero values in a time series. Then they become infinite or undefined which makes them not interpretable.
+<br>
+
+MAPE’s advantages are it’s scale-independency and easy interpretability. As said at the beginning, percentage error metrics can be used to compare the outcome of multiple time series models with different scales.
+<br>
+
+However, MAPE also comes with some disadvantages. First, it generates infinite or undefined values for zero or close-to-zero actual values
+
+Second, it also puts a heavier penalty on negative than on positive errors which leads to an asymmetry (Hyndman 2014).
+<br>
+
+And last but not least, MAPE can not be used when using percentages make no sense. This is for example the case when measuring temperatures. The units Fahrenheit or Celsius scales have relatively arbitrary zero points, and it makes no sense to talk about percentages.
+
+<br>
+
 
 
 

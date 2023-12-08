@@ -92,6 +92,26 @@ It is sq root of MSE. The units are retained.
 RMSE removes the bias towards only higher value error terms in the MSE.
 
 
+# Errors in forecasting
+
+
+![image](https://github.com/Prashantmdgl9/ml_experiments/assets/8743929/edd60ec4-f38d-46e6-91f6-20dfbb2dbd1d)
+
+## MAPE
+
+Scale dependent metrics such as MAR, RMSE, MSE are not suitable for comparing different time series.
+<br>
+
+Scale-dependent means the error metrics are expressed in the units (i.e. Dollars, Inches, etc.) of the underlying data.
+<br>
+
+The main advantage of scale dependent metrics is that they are usually easy to calculate and interpret. However, they can not be used to compare different series, because of their scale dependency
+<br>
+
+
+
+
+
 
 
 

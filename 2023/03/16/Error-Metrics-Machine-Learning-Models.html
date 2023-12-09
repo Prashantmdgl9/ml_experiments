@@ -120,3 +120,33 @@ RMSE removes the bias towards only higher value error terms in the MSE.</p>
 
 <p><br /></p>
 
+<h2 id="mase">MASE</h2>
+<p>Mean absolute scaled error
+<br /></p>
+
+<p>Many popular metrics are referred to as scale-dependent (Hyndman, 2006). Scale-dependent means the error metrics are expressed in the units (i.e. Dollars, Inches, etc.) of the underlying data.
+<br /></p>
+
+<p>The main advantage of scale dependent metrics is that they are usually easy to calculate and interpret. However, they can not be used to compare different series, because of their scale dependency</p>
+
+<p><br /></p>
+
+<p>The MASE is calculated by taking the MAE and dividing it by the MAE of an in-sample (so based on our training data) naive benchmark.</p>
+
+<p><br />
+Values of MASE greater than 1 indicate that the forecasts are worse, on average, than in-sample one-step forecasts from the naive model.
+<br />
+Since it is a scale free metric one is able to compare the model’s accuracy across (scale) different time series. Unlike the relative error metrics it does not give undefined or infinite values which makes it a suitable metric for time series data with zeros.</p>
+
+<p><br /></p>
+
+<h2 id="how-to-choose-error-metric-in-forecasting">How to choose error metric in forecasting?</h2>
+
+<p>If all series are on the same scale, the data preprocessing procedures were performed (data cleaning, anomaly detection) and the task is to evaluate the forecast performance then the MAE can be preferred because it is simpler to explain</p>
+
+<p><br /></p>
+
+<p>Prefer RMSE over MAE when the error distribution is expected to be Normal.
+<br />
+In case the data contain outliers it is advisable to apply scaled measures like MASE.</p>
+
